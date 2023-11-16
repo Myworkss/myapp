@@ -1,0 +1,104 @@
+/************Complete Page**************/
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+/****************Body*******************/
+body{
+    background-color: white;
+}
+
+/***************Main Page****************/
+.main-page{
+    height: 100vh;
+    display:flex;
+}
+
+/*****************Side Line***************/
+.side-line{
+    background-color: aqua;
+    height: 100%;
+    width:25px;
+}
+/*****************Side Bar****************/
+.side-bar{
+    background-color: #f7f7f7;
+    height: 100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-shadow: 1px 1px 15px rgb(84, 81, 81);
+}
+/********Icons*****************/
+.circle{
+    height: 75px;
+    width: 75px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.blue-circle{
+    background-color: aqua;
+}
+/**********Hover*************/
+.circle:hover{
+    background-color: yellow;
+}
+
+/************Click************/
+.circle:active{
+    background-color: green;
+}
+/***********Right Panel***********************/
+.right-panel{
+    background-color: rgba(0,0,0,0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/**************Header*****************/
+.header{
+    background-color: royalblue;
+    width: 100%;
+    height:75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-shadow: 1px 1px 15px rgb(84, 81, 81);
+}
+/*******For Header*************/
+h1{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size: 1.5rem;
+}
+
+/***********Tablet Container********/
+.tablet-container{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#tablet-image{
+    position:absolute;
+}
+
+#main-canvas{
+    position: absolute;
+    z-index: -1;
+}

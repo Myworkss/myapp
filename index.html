@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Add Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
+    <!-- Add OpenCV -->
+    <script async src="Resources/opencv.js" onload="opencvReady()"></script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div class="main-page">
+        <!-- Side Line -->
+        <div class="side-line"></div>
+        <!-- Side Bar -->
+        <div class="side-bar">
+            <span class="circle" id="RGB-Image"><i class="material-icons" style="font-size:36px; color:white;">palette</i></span>
+            <span class="circle" id="Gray-Image"><i class="material-icons" style="font-size:36px; color:white;">contrast</i></span>
+            <span class="circle" id="Objects-Detection-Image"><i class="material-icons" style="font-size:36px; color:white;">visibility</i></span>
+            <span class="circle blue-circle" id="Objects-Detection-Video"><i class="material-icons" style="font-size:36px; color:white;">videocam</i></span>
+            <button id="enableWebcambutton">Enable Webcam</button>
+        </div>
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Header -->
+            <div class="header">
+                <div class="empty-container"></div>
+                <h1>Object Detection</h1>
+                <div class="logo-container"><img src="Resources/Template/logo.png" width="90" height="30" alt=""></div>
+            </div>
+            <!-- Tablet Container -->
+            <div class="tablet-container">
+                <img id="tablet-image" src="Resources/Template/tablet.png" height="600" width="800" alt="">
+                <canvas id="main-canvas" height="540" width="740">
+                    <img id="img-main" src="Resources/Template/bus.jpg" height="540" width="740" alt="">
+                    <img id="input-image" src="Resources/Template/bus.jpg" height="640" width="640" alt="">
+                    <video id="webcam" autoplay height="640" width="640"></video>
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JS File -->
+    <script src="main.js"></script>
+    <!-- Load TensorFlow.js. This is required to use YOLOv8 model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <!-- Load the YOLOv8 model. -->
+    <script src="yolov8n_web_model/model.json"></script>
+</body>
+</html>
